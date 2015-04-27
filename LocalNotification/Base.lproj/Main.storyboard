@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7702" systemVersion="14E7f" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="2PH-oB-N5y">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7701"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--Notification-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="LocalNotification" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="time" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="yz5-e5-028">
+                                <rect key="frame" x="0.0" y="256" width="600" height="162"/>
+                                <date key="date" timeIntervalSinceReferenceDate="451782027.08330601">
+                                    <!--2015-04-26 23:00:27 +0000-->
+                                </date>
+                            </datePicker>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Mensagem" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="5yE-Dr-vKr">
+                                <rect key="frame" x="16" y="84" width="568" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hcQ-Nj-0Rx">
+                                <rect key="frame" x="0.0" y="556" width="600" height="44"/>
+                                <items>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="uaS-6n-FjV"/>
+                                    <barButtonItem title="Ativar" id="hsS-z0-toZ">
+                                        <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <connections>
+                                            <action selector="ativar:" destination="BYZ-38-t0r" id="zHA-7K-pGa"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="AWd-qp-PSz"/>
+                                </items>
+                                <color key="barTintColor" red="0.0" green="0.58248966020000004" blue="0.38032371990000002" alpha="1" colorSpace="calibratedRGB"/>
+                            </toolbar>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Notificação Ativada" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6FJ-Vk-Te7">
+                                <rect key="frame" x="169" y="135" width="263" height="50"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="4vF-4f-iur"/>
+                                    <constraint firstAttribute="width" constant="263" id="Mvy-UK-esh"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Futura-CondensedExtraBold" family="Futura" pointSize="16"/>
+                                <color key="textColor" red="0.0" green="0.58248966020000004" blue="0.38032371990000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="6FJ-Vk-Te7" firstAttribute="centerX" secondItem="5yE-Dr-vKr" secondAttribute="centerX" id="0fW-1P-o9e"/>
+                            <constraint firstItem="5yE-Dr-vKr" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="20" id="1sd-l5-zg5"/>
+                            <constraint firstAttribute="trailing" secondItem="hcQ-Nj-0Rx" secondAttribute="trailing" id="Kxa-jQ-LMc"/>
+                            <constraint firstItem="hcQ-Nj-0Rx" firstAttribute="leading" secondItem="yz5-e5-028" secondAttribute="leading" id="LeQ-wj-lcv"/>
+                            <constraint firstItem="hcQ-Nj-0Rx" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="QBv-PN-Vcy"/>
+                            <constraint firstItem="6FJ-Vk-Te7" firstAttribute="top" secondItem="5yE-Dr-vKr" secondAttribute="bottom" constant="21" id="YHM-AV-F60">
+                                <variation key="heightClass=compact" constant="7"/>
+                                <variation key="widthClass=regular" constant="121"/>
+                                <variation key="heightClass=compact-widthClass=regular" constant="16"/>
+                            </constraint>
+                            <constraint firstItem="5yE-Dr-vKr" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="YyQ-MM-sU8"/>
+                            <constraint firstItem="yz5-e5-028" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="37" id="gA2-MM-ne5">
+                                <variation key="heightClass=compact" constant="59"/>
+                                <variation key="widthClass=regular" constant="97"/>
+                                <variation key="heightClass=compact-widthClass=regular" constant="78"/>
+                            </constraint>
+                            <constraint firstItem="yz5-e5-028" firstAttribute="centerX" secondItem="5yE-Dr-vKr" secondAttribute="centerX" id="hCX-9m-zUf"/>
+                            <constraint firstItem="hcQ-Nj-0Rx" firstAttribute="bottom" secondItem="wfy-db-euE" secondAttribute="top" id="hcP-O9-nHh"/>
+                            <constraint firstItem="hcQ-Nj-0Rx" firstAttribute="trailing" secondItem="yz5-e5-028" secondAttribute="trailing" id="jdO-Sh-yfd"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Notification" id="YyU-Hq-0Gc"/>
+                    <connections>
+                        <outlet property="datePicker" destination="yz5-e5-028" id="eai-9d-ML3"/>
+                        <outlet property="labelN" destination="6FJ-Vk-Te7" id="29Z-z5-pEp"/>
+                        <outlet property="tf" destination="5yE-Dr-vKr" id="7Jp-KS-K0m"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1117" y="366"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="eeC-z6-oSX">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="2PH-oB-N5y" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="yOh-Vm-vSH">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="bO1-ns-ohP"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="YRT-3O-Obb" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="302" y="-327"/>
+        </scene>
+    </scenes>
+</document>
